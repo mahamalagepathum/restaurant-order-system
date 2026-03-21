@@ -1,70 +1,171 @@
-# Getting Started with Create React App
+<p align="center">
+  <img src="screenshots/logo.png" width="180" alt="Group 76 Logo" />
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Restaurant Order Management System
 
-## Available Scripts
+**Group 76 | PUSL2021 Computing Group Project | Plymouth University**
 
-In the project directory, you can run:
+A web-based application that allows small restaurant owners to manage customer orders digitally. Customers scan a QR code on their table to view the menu and place orders. Orders appear on the owner's dashboard in real time.
 
-### `npm start`
+**Live Demo:** https://restaurant-order-system-60d43.web.app
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots
 
-### `npm test`
+### Customer Side
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Order Form | Order Placed | Order Confirmed |
+|:---:|:---:|:---:|
+| ![](screenshots/customer-order-form.png) | ![](screenshots/order-placed.png) | ![](screenshots/order-confirmed.png) |
 
-### `npm run build`
+### Owner Dashboard
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Login | Register | Orders |
+|:---:|:---:|:---:|
+| ![](screenshots/login.png) | ![](screenshots/register.png) | ![](screenshots/dashboard-orders.png) |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Menu Management | Add Item | QR Code |
+|:---:|:---:|:---:|
+| ![](screenshots/menu-management.png) | ![](screenshots/add-item.png) | ![](screenshots/qr-code.png) |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| New Order Notification | Order Confirmed |
+|:---:|:---:|
+| ![](screenshots/new-order-notification.png) | ![](screenshots/order-confirmed-dashboard.png) |
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Owner registration and login with Firebase Authentication
+- Menu management — add, edit, delete items with images, prices and categories
+- Automatic QR code generation per restaurant, downloadable as PNG
+- Customer order form — no login or app installation required
+- Real-time order notifications on owner dashboard with audio alert
+- Order confirmation with status update reflected on customer screen
+- Data isolation between restaurants via Firestore security rules
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Tech Stack
 
-## Learn More
+| Layer | Technology |
+|---|---|
+| Frontend | React.js v19 |
+| Routing | React Router DOM v7 |
+| Backend | Node.js with Express |
+| Database | Firebase Firestore |
+| Authentication | Firebase Authentication |
+| File Storage | Firebase Storage |
+| QR Code | qrcode.react v4 |
+| Styling | Tailwind CSS v3 |
+| Hosting | Firebase Hosting |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure
 
-### Code Splitting
+```
+src/
+├── App.js
+├── index.js
+├── firebase/
+│   └── firebaseConfig.js
+├── context/
+│   └── AuthContext.js
+├── pages/
+│   ├── LoginPage.js
+│   ├── RegisterPage.js
+│   └── DashboardPage.js
+├── components/
+│   ├── Navbar.js
+│   ├── Layout.js
+│   ├── Footer.js
+│   ├── MenuTab.js
+│   ├── MenuItemCard.js
+│   ├── AddItemModal.js
+│   ├── OrdersTab.js
+│   ├── OrderCard.js
+│   └── QRCodeDisplay.js
+└── customer/
+    └── CustomerOrderPage.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Prerequisites
 
-### Making a Progressive Web App
+- Node.js v18 or later
+- npm
+- Firebase account (free Spark plan)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Installation
 
-### Advanced Configuration
+```bash
+git clone https://github.com/mahamalagepathum/restaurant-order-system.git
+cd restaurant-order-system
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Firebase Configuration
 
-### Deployment
+Create a `.env` file in the project root:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+REACT_APP_FIREBASE_API_KEY=your_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+REACT_APP_FIREBASE_APP_ID=your_app_id
+```
 
-### `npm run build` fails to minify
+### Run
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm start
+```
+
+---
+
+## Database Structure
+
+```
+restaurants/
+  {restaurantId}
+    ownerName, shopName, email, createdAt
+
+menuItems/
+  {itemId}
+    restaurantId, itemName, category, price,
+    description, imageUrl, isAvailable, createdAt
+
+orders/
+  {orderId}
+    restaurantId, tableNumber, items[],
+    totalPrice, status, createdAt
+```
+
+---
+
+## Team
+
+| Name | Student ID | Responsibilities |
+|---|---|---|
+| Mahamalage Perera | 10968730 | Frontend, Firestore integration, QR code, real-time notifications, customer order form |
+| Anjula Wijeyaratne | 10968469 | Firebase Authentication, Firebase Storage, backend, order confirmation, deployment |
+
+---
+
+## Module Details
+
+| | |
+|---|---|
+| Module | PUSL2021 Computing Group Project |
+| Programme | SE / CS / DS / TM |
+| Supervisor | Mr. Diluka Wijesinghe |
+| Institution | In Partnership with Plymouth University |
+| Academic Year | 2024 / 2025 |
