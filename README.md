@@ -157,6 +157,8 @@ orders/
 |---|---|---|
 | Mahamalage Perera | 10968730 | Frontend, Firestore integration, QR code, real-time notifications, customer order form |
 | Anjula Wijeyaratne | 10968469 | Firebase Authentication, Firebase Storage, backend, order confirmation, deployment |
+| Kevan Feranando | 10952735 | Testing, development support, report writing and documentation |
+
 
 ---
 
