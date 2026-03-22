@@ -169,5 +169,5 @@ orders/
 | Module | PUSL2021 Computing Group Project |
 | Programme | SE / CS / DS / TM |
 | Supervisor | Mr. Diluka Wijesinghe |
-| Institution | In Partnership with Plymouth University |
+| Institution |  Plymouth University |
 | Academic Year | 2024 / 2025 |
