@@ -157,8 +157,7 @@ orders/
 |---|---|---|
 | Mahamalage Perera | 10968730 | Frontend, Firestore integration, QR code, real-time notifications, customer order form |
 | Anjula Wijeyaratne | 10968469 | Firebase Authentication, Firebase Storage, backend, order confirmation, deployment |
-| Kevan Feranando | 10952735 | Testing, development support, report writing and documentation |
-
+| Kevan Fernando | 10952735 | Testing, development support, report writing and documentation |
 
 ---
 
@@ -169,5 +168,5 @@ orders/
 | Module | PUSL2021 Computing Group Project |
 | Programme | SE / CS / DS / TM |
 | Supervisor | Mr. Diluka Wijesinghe |
-| Institution |  Plymouth University |
+| Institution | In Partnership with Plymouth University |
 | Academic Year | 2024 / 2025 |
